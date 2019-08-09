@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AnimeFLV</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <button id="closeButton" @click="close">×</button>
+  
+    <section id="info">
+      <h1>{{ animeInfo.name }}</h1>
+      <img :src="animeInfo.id | idToPoster" alt="Anime poster">
+    </section>
+  
+    <ol id="episodes">
+      <li
+        v-for="{ n } in episodes"
+        :class="[ lastSeen >= n && 'seen', playing == n && 'playing' ]"
+        @click="playEpisode(n)"
+      >
+        <img :src="n | episodeNToThumbnail" alt="Episode thumbnail">
+        <span>{{ n }}</span>
+      </li>
+    </ol>
+  </div>
+
+
+  <div id="dragger"></div>
+  <script src="vue.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

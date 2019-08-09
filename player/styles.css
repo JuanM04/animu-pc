@@ -1,0 +1,113 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  background-color: #2f353a;
+  color: white;
+}
+
+
+
+#closeButton {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #00bcf2;
+  border: none;
+  border-radius: 50%;
+  transition: .1s;
+  z-index: 100;
+}
+
+#closeButton:hover {
+  background-color: #008db5;
+}
+
+
+
+#info {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  margin: 15px;
+}
+
+#info h1 {
+  margin: auto 0;
+  font-weight: 400;
+}
+
+#info img {
+  width: 260px;
+  height: 370px;
+  border-radius: 5px;
+}
+
+
+
+#episodes {
+  margin-top: 50px;
+  padding: 0;
+}
+
+#episodes li {
+  display: flex;
+  height: 60px;
+  padding: 5px 15px;
+  list-style: none outside;
+  border-left: 5px solid transparent;
+  transition: .1s;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+#episodes li:nth-child(odd) {
+  background-color: rgba(0, 188, 242, .1);
+}
+
+#episodes li:hover {
+  background-color: rgba(0, 188, 242, .25);
+}
+
+#episodes .seen {
+  border-left: 5px solid #00bcf2;
+}
+
+#episodes .playing {
+  background-color: rgba(0, 188, 242, .5) !important;
+}
+
+#episodes img {
+  width: 110px;
+  height: 60px;
+  border-radius: 3px;
+}
+
+#episodes span {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+
+
+#dragger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 10px;
+  background-color: #00bcf2;
+  visibility: hidden;
+  cursor: grab;
+  -webkit-app-region: drag;
+}
+
+#dragger:active {
+  cursor: grabbing;
+}
