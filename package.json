@@ -8,6 +8,10 @@
     "email": "me@juanm04.com",
     "url": "https://juanm04.com"
   },
+  "repository": {
+    "type" : "git",
+    "url" : "git@github.com:JuanM04/animu.git"
+  },
   "scripts": {
     "start": "electron .",
     "release": "electron-builder . --win --x64 --ia32",
