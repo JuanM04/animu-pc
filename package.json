@@ -27,7 +27,7 @@
     "publish": ["github"]
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "discord-rich-presence": "^0.0.8",
     "electron-updater": "^4.1.2"
   },
